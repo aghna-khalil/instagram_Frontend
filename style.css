@@ -1,0 +1,347 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600;700&display=swap");
+
+:root {
+  /* --header-height: 4rem; */
+
+  /*========== Colors ==========*/
+  
+  --black: #313131;
+  --insta-color: #C913B9;
+  --icon-black:rgba(38,38,38,1);
+  --search-gray: rgba(239, 239, 239, 1);
+  --white: #ffffff;
+  --section-BG:#fafafa;
+  --border:rgba(219, 219, 219, 1);
+  
+
+
+  /*========== Font  ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+
+  --font: "sans-serif";
+  --biggest-font-size: 3rem;
+  --bigger-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --small-font-size: 15px;
+  --font-normal:22px
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-semi-bold: 600;
+  --font-bold: 800;
+
+ 
+}
+
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: var(--font);
+  
+}
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+}
+/* ==============HEADER====================== */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 5%;
+}
+header .logo{
+    height: 30px;
+    display: flex;
+    gap: 10px;
+}
+header .logo img{
+    height: 100%;
+    object-fit: contain;
+}
+header .logo i{
+    color: var(--icon-black);
+    font-weight: var(--font-bold);
+}
+header .search-box{
+    width: 250px;
+    background-color: var(--search-gray);
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    padding: 3px 16px;
+
+}
+header .search-box input{
+    height: 30px;
+    background-color:var(--search-gray);
+    border: none;
+    outline: none;
+    font-size: var(--small-font-size);
+    color: #8e8e8e;
+}
+header nav ul{
+    display: flex;
+    /* align-items: center; */
+
+}
+header ul li{
+    margin-right:20px ;
+}
+header nav ul li:last-child{
+    margin-right: 0;
+}
+header nav ul li a img{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+header nav ul li a i{
+    color: var(--icon-black);
+    font-size:22px;
+}
+/* =====================section===================== */
+section{
+    padding: 30px 18%;
+    display:flex;
+    background-color: var(--section-BG);
+
+}
+.lef-side{
+    width: 65%;
+}
+/* ===========================story================== */
+.story{
+    display: flex;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    /* flex-wrap: wrap; */
+    padding: 16px;
+    border-radius: 3px;
+}
+.story .stories{
+    width: 18%;
+}
+.story .stories a img{
+    border-radius: 50%;
+    border: 2px solid var(--insta-color);
+    padding: 2px;
+}
+.story .stories p{
+    width: 90%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+/* ========================posts================== */
+.posts{
+    margin: 25px 0;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+}
+.posts .post-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+}
+.posts .post-title .post-left{
+    display: flex;
+    align-items: center;
+  
+}
+.posts .post-title .post-left .post-image{
+    margin-right: 10px;
+}
+.posts .post-title .post-left .post-image img{
+    border-radius:50%;
+    object-fit: contain;
+    border: 2px solid var(--insta-color);
+    padding: 1px;
+}
+.posts .post-title .post-left .post-details .name{
+    /* padding-bottom: 2px; */
+    font-weight: var(--font-bold);
+    margin: 0;
+}
+.posts .post-title .post-right i{
+    font-size: 26px;
+}
+.posts .post-content img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.posts .post-footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+}
+.posts .post-footer .post-footer-icon i{
+    font-size: 22px;
+    margin-right: 10px;
+}
+.posts .post-footer .save{
+    font-size: 22px;
+}
+.posts .post-footer-content{
+    padding: 0 16px 16px 16px;
+}
+.posts .post-footer-content p{
+    margin-bottom: 3px;
+}
+.posts .post-footer-content .likes{
+    margin-bottom: 8px;
+}
+.posts .post-footer-content .name{
+    font-weight: var(--font-semi-bold);
+}
+
+.posts .post-footer-content span{
+    margin-left: 10px;
+    font-weight: normal;
+}
+.posts .post-footer-content .post-time{
+    font-size: 10px;
+    margin-top: 6px;
+}
+.posts .add-comment{
+    padding:7px 16px;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.posts .add-comment i{
+    font-size: 22px;
+}
+.posts .add-comment input{
+    border: none;
+   
+}
+.posts .add-comment .right-side p{
+
+ color: lightgrey;
+}
+/* ===========================right-side contact================== */
+.right-side{
+    width: 31%;
+    margin-top: 15px;
+    position: fixed;
+    right: 30px;
+}
+.right-side .profile-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.right-side .profile-title .profile-left{
+    display: flex;
+   align-items: center;
+   margin-right: 40px;
+}
+.right-side .profile-title .profile-left .profile-image img{
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.right-side .profile-title .profile-left .details p{
+    margin: 0;
+}
+.suggest{
+    display: flex;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+.suggestion-title{
+    display: flex;
+    justify-content: space-between;
+}
+.suggestion-title .suggestion-left{
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+.suggestion-title .suggestion-left .image img{
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.suggestion-title .suggestion-left .details p{
+    margin: 0;
+    padding-bottom: 3px;
+    /* padding-top: 10px; */
+    font-size: 15px;
+
+}
+
+
+@media (min-width:992px){
+    section {
+        padding:20px 0px;
+    }
+    section .left-side{
+        width: 65%;
+
+    }
+}
+@media (max-width:992px){
+    section{
+        padding: 10px 20px;
+    }
+    section .left-side{
+        width: 100%;
+
+    }
+    section .right-side{
+        display: none;
+
+    }
+
+}
+@media (max-width:768px){
+   header .search-box{
+        display: none;
+    }
+    section{
+        padding: 30px 20px;
+    }
+
+}
+@media (max-width:576px){
+    .story .stories{
+        width: 12%;
+    }
+    header{
+        padding: 10px 10px;
+    }
+    header nav ul li{
+        margin-right: 10px;
+    }
+    header nav ul li a i {
+        font-size: 14px;
+    }
+
+        section {
+            padding:20px 10px;
+        }
+    
+}
